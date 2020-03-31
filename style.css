@@ -1,0 +1,82 @@
+@font-face {   /*new font added*/
+  src: url(gaming_font.ttf);
+  font-family:gaming_font;
+}
+
+
+
+body, html {  /*padding, font, color, etc (genral properties) of text*/
+padding-left: 3vmin;
+padding-right: 3vmin;
+  font-family: gaming_font;
+  line-height: 20px;
+  font-family: bit;
+  background-color: black;
+  font-family: gaming_font;
+  color:white;
+  font-size: 10px;
+  color: #e7ba00
+}
+h2{  /*rules for heading 2*/
+  font-size: 30px;
+    line-height: 35px;
+}
+
+.grid_container{/*sets up a 12 cloumn css grid */
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-column-gap:  2vmin;
+  grid-row-gap: 20vmin;
+}
+.item-4x{/*4 wide column*/
+  grid-column-end: span 4;
+}
+.item-4x4{/*5 by 4 item (name is wrong not used)*/
+  grid-column-end: span 5;
+  grid-row-end: span 4;
+
+}
+.FW{  /*class for setting images to be full width*/
+  width: 100%;
+}
+.gifs{ /*sets a 6x3 box for gifs*/
+  grid-column-end: span 6;
+  grid-row-end: span 3;
+}
+.txt{/*sets another 6x3 box for text */
+  grid-column-end: span 6;
+  grid-row-end: span 3;
+}
+.item12x2{ /*12 by 1 box*/
+  grid-column-end: span 12;
+  grid-row-end: span 1;
+
+}
+.banner{ /*move contnet */
+
+  justify-content: center;
+
+}
+.item12x{  /* 12x and cemtered */
+  grid-column-end: span 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.item8x{ /*8x and centered*/
+  grid-column-end: span 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}   /*changes the site to a one column view with a smaller vh (have a problem were it doesn't drop content in order) */
+
+@media screen and (max-width: 600px) {
+
+.grid_container, .item-4x, .item12x2, .gifs, .txt, .item12x{
+  grid-template-columns: 1fr;
+}
+}
